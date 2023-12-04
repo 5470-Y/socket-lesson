@@ -1,3 +1,4 @@
+/*
 package study.socket.client;
 
 import java.io.IOException;
@@ -16,7 +17,7 @@ public class ClientExample {
         // InetSocketAddress local = new InetSocketAddress(ip, 1111);
 
         Socket socket = new Socket();
-        // Socket socket01 = new Socket(ip, port); // соединение с удаленным сервером
+        Socket socket01 = new Socket(ip, port); // соединение с удаленным сервером
         // Socket socket02 = new Socket(remote.getHostString(), remote.getPort());
         OutputStream output = null;
         InputStream input = null;
@@ -34,6 +35,8 @@ public class ClientExample {
 
             output = socket.getOutputStream();
             input = socket.getInputStream();
+
+            // тут сериализация и десериализация в обджектСТрим
 
             output.write(11);
             System.out.println(input.read());
@@ -54,3 +57,4 @@ public class ClientExample {
 
     }
 }
+*/
