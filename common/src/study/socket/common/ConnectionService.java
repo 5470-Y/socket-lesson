@@ -19,7 +19,7 @@ public class ConnectionService implements AutoCloseable{
     }
 
     public void writeMessage(Message message) throws IOException {
-        message.setSentAT(ZonedDateTime.now());
+        message.setSentAt(ZonedDateTime.now());
         objectOutputStream.writeObject(message);
         objectOutputStream.flush();
     }
@@ -33,7 +33,7 @@ public class ConnectionService implements AutoCloseable{
     }
 
     @Override
-    public void close() throws Exception {
+    public void close( ) {
         try {
             objectInputStream.close();
             objectOutputStream.close();

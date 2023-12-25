@@ -5,7 +5,7 @@ import java.time.ZonedDateTime;
 
 public class Message {
     private final String text;
-    private ZonedDateTime sentAT;
+    private ZonedDateTime sentAt;
 
     public Message(String text) {
         this.text = text;
@@ -15,11 +15,13 @@ public class Message {
         return text;
     }
 
-    public ZonedDateTime getSentAT() {
-        return sentAT;
+    public ZonedDateTime getSentAt() {
+        return sentAt;
     }
 
-    public void setSentAT(ZonedDateTime sentAT) {
-        this.sentAT = sentAT;
+    public void setSentAt(ZonedDateTime sentAt) {
+        this.sentAt = sentAt;
     }
+
+    // можно переопределить toString()
 }

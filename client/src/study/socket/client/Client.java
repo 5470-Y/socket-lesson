@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 
 public class Client implements Runnable{
-    private final InetSocketAddress remoteAddress;
+    private final InetSocketAddress  remoteAddress;
 
     public Client(InetSocketAddress remoteAddress) {
         this.remoteAddress = remoteAddress;
@@ -36,9 +36,9 @@ public class Client implements Runnable{
                    System.out.println(message.getText());
                 } catch (IOException e){
                     System.out.println("Сервер перестал отвечать");
-                } catch (Exception e) {
-                    throw new RuntimeException(e);
-                }
+                } /*catch (Exception e) {
+                    throw new  RuntimeException(e);
+                }*/
             } catch (IOException e) {
                 System.out.println("Сервер не доступен");
             }
